@@ -1,4 +1,4 @@
-#root {
+:root {
      --gray: #b0acb0;
      --white: #e2dddf;
      --cyan: #84ebd9;
@@ -7,5 +7,5 @@
 }
 
 body {
-    background-color: var(--gray);
+    background-color: var(--black);
 }
