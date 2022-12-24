@@ -9,7 +9,7 @@ trying to build a homepage/dashboard for my browser to organize my online activi
 6. https://www.chess.com/home
 7. https://www.duolingo.com/
 8. https://www.guru.com/
-9. https://www.fiverr.com/?
+9. https://www.fiverr.com/
 10. https://www.edx.org/
 11. https://www.coursera.org/
 12. https://tryhackme.com/
@@ -17,3 +17,4 @@ trying to build a homepage/dashboard for my browser to organize my online activi
 14. https://www.hackthebox.com/
 15. https://leetcode.com/
 16. https://www.hackerrank.com/
+17. https://github.com/xSomoy
