@@ -9,3 +9,17 @@
 body {
     background-color: var(--black);
 }
+
+.container {
+    text-align: center;
+}
+a {
+    padding: 15px;
+    text-decoration: none;
+    color: var(--cyan);
+    border: var(--white) 2px solid;
+    display: inline-block;
+    margin: 15px;
+    background-color: var(--blueGreen);
+    border-radius: 5px;
+}
