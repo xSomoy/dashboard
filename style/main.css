@@ -5,3 +5,7 @@
      --blueGreen: #3d898d;
      --black: #2f404d;         
 }
+
+body {
+    background-color: var(--gray);
+}
