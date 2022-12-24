@@ -1,2 +1,19 @@
-# dashboard
+# Dashboard
 trying to build a homepage/dashboard for my browser to organize my online activity
+> Websites
+1. https://www.freelancer.com/dashboard
+2. https://www.upwork.com/
+3. https://www.peopleperhour.com/
+4. https://www.babbel.com/
+5. https://www.sololearn.com/profile/14962254
+6. https://www.chess.com/home
+7. https://www.duolingo.com/
+8. https://www.guru.com/
+9. https://www.fiverr.com/?
+10. https://www.edx.org/
+11. https://www.coursera.org/
+12. https://tryhackme.com/
+13. https://www.picoctf.org/
+14. https://www.hackthebox.com/
+15. https://leetcode.com/
+16. https://www.hackerrank.com/
