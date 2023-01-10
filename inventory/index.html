@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inventory</title>
+    <style>
+        /* CSS for the inventory table */
+        table {
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HTML for the inventory table -->
+    <table id="inventory">
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+        </tr>
+    </table>
+
+    <!-- HTML for the add item form -->
+    <form id="add-item-form">
+        <label for="item-name">Item Name:</label>
+        <input type="text" id="item-name">
+        <label for="item-quantity">Quantity:</label>
+        <input type="number" id="item-quantity">
+        <button type="submit">Add Item</button>
+    </form>
+
+    <script>
+       // JavaScript to add and remove items from the inventory and save data to localStorage
+
+// Load inventory data from localStorage
+var inventory = JSON.parse(localStorage.getItem("inventory")) || [];
+
+// Add a new item to the inventory
+function addItem(name, quantity) {
+  inventory.push({
+    name: name,
+    quantity: quantity
+  });
+  updateInventoryTable();
+  saveInventory();
+}
+
+// Remove an item from the inventory
+function removeItem(index) {
+  inventory.splice(index, 1);
+  updateInventoryTable();
+  saveInventory();
+}
+
+// Save the current inventory to localStorage
+function saveInventory() {
+  localStorage.setItem("inventory", JSON.stringify(inventory));
+}
+
+// Update the inventory table with the current inventory data
+function updateInventoryTable() {
+  var table = document.getElementById("inventory");
+  // Clear the table
+  table.innerHTML = "";
+  
+  // Add the headers
+  table.innerHTML = "<tr><th>Item</th><th>Quantity</th><th>Actions</th></tr>";
+  
+  // Add a new row for each item
+  for (var i = 0; i < inventory.length; i++) {
+    var item = inventory[i];
+    var row = table.insertRow();
+    var nameCell = row.insertCell(0);
+    var quantityCell = row.insertCell(1);
+    var actionCell = row.insertCell(2);
+    
+    nameCell.innerHTML = item.name;
+    quantityCell.innerHTML = item.quantity;
+    actionCell.innerHTML = '<button onclick="removeItem(' + i + ')">Remove</button>';
+  }
+}
+
+// Add event listener for form submission
+document.getElementById("add-item-form").addEventListener("submit", function(e) {
+  e.preventDefault(); // prevent page reload on form submission
+  var name = document.getElementById("item-name").value;
+  var quantity = document.getElementById("item-quantity").value;
+  addItem(name, quantity);
+});
+
+
+        
+
+    </script>
+
+</body>
+
+</html>
