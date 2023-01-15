@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "YouTube Video Extractor",
+    "description": "A chrome extension that extract video url from youtube from current tab.",
+    "version": "1.0",
+    "permissions": [
+        "tabs"
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "browser_action": {
+        "default_title": "Extract YouTube Video URL",
+        "default_popup": "popup.html"
+    }
+}
