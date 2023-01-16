@@ -23,18 +23,18 @@ button.pack()
 root.mainloop()
 
 
-# def list_files(directory):
-#     # create an empty list to store the files
-#     files = []
-#     # use the os.listdir() method to get a list of all files and directories in the given directory
-#     for file_name in os.listdir(directory):
-#         files.append(file_name)
-#     # return the list of files
-#     return files
+def list_files(directory):
+    # create an empty list to store the files
+    files = []
+    # use the os.listdir() method to get a list of all files and directories in the given directory
+    for file_name in os.listdir(directory):
+        files.append(file_name)
+    # return the list of files
+    return files
 
 
-# # example usage
-# files = list_files("D:\\Downloads")
+# example usage
+files = list_files(select_directory)
 
-# for i in files:
-#     print(i)
+for i in files:
+    print(i)
