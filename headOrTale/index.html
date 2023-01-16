@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Coin Flip</title>
+    <style>
+        body {
+            background-color: #414140;
+            text-align: center;
+        }
+
+        #flip-button {
+            background-color: #FFF;
+            border: none;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            font-size: 50px;
+        }
+
+        .flip {
+            animation: flip 1s;
+            animation-delay: 0.5s;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #flip-button {
+            margin: auto;
+        }
+
+
+
+
+        @keyframes flip {
+            from {
+                transform: rotateY(0deg);
+            }
+
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+        h2 {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button id="flip-button" class="flip">Flip Coin</button>
+        <h2 id="result"></h2>
+    </div>
+
+    <script>
+        const flipButton = document.getElementById("flip-button");
+        const result = document.getElementById("result");
+
+        flipButton.addEventListener("click", function () {
+            var flip = Math.floor(Math.random() * 2);
+            if (flip === 0) {
+                flipButton.innerHTML = "Heads";
+            } else {
+                flipButton.innerHTML = "Tails";
+            }
+        });
+
+    </script>
+</body>
+
+</html>
