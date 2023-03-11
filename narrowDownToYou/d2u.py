@@ -1,5 +1,7 @@
 # Real Word Data
-world_population = 8021309772
+
+# WORLD 
+world_population = 8043437969
 
 # AFRICA
 afria_female = 714604047
@@ -24,6 +26,10 @@ europe_male = 362491426
 # AUSTRALIA
 australia_female = 13363462
 australia_male = 13278336
+
+print(afria_female + afria_male + asia_female + asia_male + north_Amerca__male + north_Amerca_female + south_Amerca__male + south_Amerca_female + europe_male + europe_female + australia_female + australia_male )
+
+
 
 
 # male_ration = 50.42
